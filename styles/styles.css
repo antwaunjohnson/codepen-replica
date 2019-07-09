@@ -1,11 +1,13 @@
  body {
-   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: rgba(25,25,25,1);
-  color: white;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(25,25,25,1);
+    color: white;
+    width: 100%;
 }
+
 
 
 /* navbar styles */
@@ -37,15 +39,22 @@
 }
 
 
- .navbar > .menu {
+ .navigation-wrapper > .navbar > .menu {
    display: flex;
    flex-direction: row;
    list-style-type: none;
    margin: 10;
    padding: 0;
    width: 500px;
-   justify-content: center;
+   justify-content: space-around;
    align-items: center;
+   background-color: transparent;
+}
+
+.navigation-wrapper > .navbar span {
+  position: relative;
+  left: 65px;
+  color: #fff77a;
 }
 
 
@@ -53,7 +62,7 @@
   display: flex;
   flex-direction: row;
   margin-left: 10px;
-  justify-contnet: center;
+  justify-content: center;
   align-items: center;
   text-decoration: none;
   color: #fff;
@@ -71,6 +80,7 @@
   align-items: center;
   float: left;
   line-height: 35px;
+  position: relative;
 }
 
 .spark > #spark a{
@@ -142,6 +152,7 @@
   font-size: 1.5em;
   width: 50px;
   margin-top: 5px; 
+  margin-left: 10px;
 }
 
 /* spacer */
@@ -154,41 +165,53 @@
 /* main-content styles */
 
 .main-content-container {
-  max-width: 1000px;
-   margin: 30px;
-  padding: 20px; 
+  width: 100%;
+  margin: 20px;
+  height: 500px;
+  
 }
 
 .main-content-container > .main-content-row {
-  display: grid;
-  grid-template-columns: 750px 750px;
-  grid-gap: 10px;
+  display: flex;
+  flex-direction: row;
   height: 500px;
 }
 
 .main-content-row > .left-column {
-  grid-column: 750px;
   float: left;
-  width: 50%;
+  width: 100%;
 } 
 
 .main-content-row > .left-column {
   display: flex;
   flex-direction: column;
-  font-size: 25px;
-  letter-spacing: 2px;
+  font-size: 35px;
+  letter-spacing: 0;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  margin: 69px;
 }
 
-.main-content-row > .left-column > .pg1 {
-  font-size: 2.5em;
-  justify-content: center;
-  text-align: center;
+.main-content-row > .left-column > .left-column-text1 {
+  font-family: 'Montserrat', sans-serif;
+
 }
+
+.main-content-row > .left-column > .left-column-text1, .left-column-text2 {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+
+
+
+
 
 .main-content-row > .right-column {
-  grid-column: 750px;
   float: right;
-  width: 50%;
+  width: 100%;
 } 
 
 .image-label {
@@ -202,8 +225,7 @@
 
 
 .main-content-container > .main-content-row > .right-column > #main-image > .main-image {
-  height: 610px;
-  width: 200%;
+  width: 100%;
   object-fit: cover;
 }
 
